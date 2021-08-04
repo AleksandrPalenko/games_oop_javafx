@@ -22,10 +22,10 @@ public final class Logic {
     }
 
     private boolean free(Cell[] steps) throws OccupiedCellException {
-        for (int i = 0; i < figures.length; i++) {
-            for (int j = 0; j < steps.length; i++) {
-                if (figures[i] != null && figures[i].position().equals(steps[i])) {
-                    throw new OccupiedCellException();
+        for (Figure figure : figures) {
+            for (Cell step : steps) {
+                if (figure != null && figure.position().equals(step)) {
+                    throw new OccupiedCellException("Could not by stepsCould not by step");
                 }
             }
         }
@@ -44,6 +44,6 @@ public final class Logic {
                 return index;
             }
         }
-        throw new FigureNotFoundException();
+        throw new FigureNotFoundException("Could not by find");
     }
 }

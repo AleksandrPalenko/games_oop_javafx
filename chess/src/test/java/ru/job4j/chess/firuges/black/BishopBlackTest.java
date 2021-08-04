@@ -29,7 +29,7 @@ public class BishopBlackTest {
     }
 
     @Test(expected = ImpossibleMoveException.class)
-    public void testWayDiagonal() {
+    public void testWhenDiagonal() {
         BishopBlack bishopBlack = new BishopBlack(Cell.A1);
         bishopBlack.way(Cell.A4);
     }
