@@ -13,13 +13,15 @@ public class BishopBlackTest {
     @Test
     public void position() {
         BishopBlack position = new BishopBlack(Cell.A1);
-        position.position();
+        Cell rsl = position.position();
+        assertThat(rsl, is(Cell.A1));
     }
 
     @Test
     public void copy() {
-        BishopBlack position1 = new BishopBlack(Cell.A1);
-        position1.copy(Cell.A1);
+        BishopBlack bishopBlack = new BishopBlack(Cell.A1);
+        Figure rsl = bishopBlack.copy(Cell.A1);
+        assertThat(rsl.position(), is(Cell.A1));
     }
 
     @Test
